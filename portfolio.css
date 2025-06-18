@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('IMG_0408.heic') no-repeat center center fixed;
+    background-size: cover;
+    color: rgb(0, 0, 0);
+}
+
+nav {
+    background-color: rgb(8, 8, 8);
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: rgb(197, 197, 197);
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #0c0a0a;
+}
+
+
+/* Section styling */
+
+section {
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+header,
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+    #contact ul {
+        list-style: none;
+        padding: 0;
+    }
+    #contact li {
+        margin-bottom: 8px;
+    }
+    #contact a {
+        color: #534c4c;
+        text-decoration: none;
+    }
+    #contact a:hover {
+        text-decoration: underline;
+    }
+}

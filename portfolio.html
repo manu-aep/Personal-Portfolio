@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My portfolio - Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header,
+        footer {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #000000;
+        }
+        
+        nav button {
+            padding: 14px 20px;
+            background: none;
+            border: none;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        nav button:hover,
+        nav button.active {
+            background-color: #555252;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <h1>Mallikarjun</h1>
+        <p>Web Developer | Freelancer | Coder</p>
+    </header>
+
+    <nav class="fade-in">
+        <button class="tab-link active" onclick="openTab(event, 'about')">About</button>
+        <button class="tab-link" onclick="openTab(event, 'skills')">Skills</button>
+        <button class="tab-link" onclick="openTab(event, 'projects')">Projects</button>
+    </nav>
+
+    <main>
+        <section id="about" class="tab-content active fade-in">
+            <h2>About Me</h2>
+            <p>I’m a passionate web developer who enjoys building clean and user-friendly websites. I am excited about front-end development and love creating beautiful, functional user experiences. I'm also passionate about freelancing and always looking
+                to gain practical experience. more to gain and more to explore</p>
+        </section>
+
+        <section id="skills" class="tab-content fade-in">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="tab-content fade-in">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="https://manugt.my.canva.site" target="_blank">Project - Portfolio Website</a></li>
+            </ul>
+        </section>
+        <h2>Get in Touch</h2>
+        <p>Feel free to reach out to me via the following platforms:</p>
+        <ul>
+            <li><a href="https://www.instagram.com/manugt__" target="_blank">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/mallikarjun-k-84ba31323/" target="_blank">LinkedIn</a></li>
+            <li><a href="mailto: manumanu6573@gmail.com">Gmail</a></li>
+        </ul>
+    </main>
+
+    <footer class="fade-in">
+        <p>© 2025 My Portfolio</p>
+    </footer>
+
+    <script>
+        function openTab(evt, tabId) {
+            const contents = document.querySelectorAll('.tab-content');
+            const links = document.querySelectorAll('.tab-link');
+
+            contents.forEach(content => content.classList.remove('active'));
+            links.forEach(link => link.classList.remove('active'));
+
+            document.getElementById(tabId).classList.add('active');
+            evt.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
